@@ -13,41 +13,34 @@ import java.util.Scanner;
 public class Ex04_MediaNotaValida {
 
 	public static void main(String[] args) {
-		
-		Scanner teclado = new Scanner (System.in);
-		
-		int i =1;
-		double peso1, peso2, media;
-		
-		
-		while(i < 6){
-		
-		System.out.print("Digite seu nome: ");
-		String nomeAluno = teclado.next();
-		
-		System.out.print("Digite sua nota 1: ");
-		double notaA = teclado.nextDouble();
-		System.out.print("Digite sua nota 2: ");
-		double notaB = teclado.nextDouble();
-		
-		peso1 = notaA * 1;
-		peso2 = notaB * 2;
-		
-		media = (peso1 + peso2)/2;
-		
-		
-		if(media >= 0 && media < 10) {
-			System.out.println("Olá aluno, " + nomeAluno + ", sua nota 1 foi: " + peso1 + ", e sua nota 2 foi: "+ peso2 + ". Portanto sua media final é de: "+ media);
-		}else {
-			System.out.println("Sua nota é invalida, verifique com a secretaria! ");
-			System.out.println();
+
+		Scanner teclado = new Scanner(System.in);
+
+		int i = 0;
+		double notaA = 0, notaB = 0, media = 0;
+
+		while (i < 6) {
+
+			System.out.print("Digite seu nome: ");
+			String nomeAluno = teclado.next();
+
+			System.out.print("Digite sua nota 1: ");
+			notaA = teclado.nextDouble();
+			System.out.print("Digite sua nota 2: ");
+			notaB = teclado.nextDouble();
+
+			media = (notaA + notaB * 2) / 3;
+
+			if (media >= 0 && media < 10) {
+				System.out.println("Olá aluno, " + nomeAluno + "sua média é: " + media);
+			} else {
+				System.out.println("Sua nota é invalida, verifique com a secretaria! ");
+				System.out.println();
+			}
+
+			i++;
 		}
-				
-		
-		 i++;
-		}
-		
-		
+
 	}
-	
+
 }
